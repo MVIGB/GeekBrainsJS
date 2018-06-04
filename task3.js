@@ -47,7 +47,7 @@ case '000':
 outputString = '';
 break;
 
-default: //сюда попадать не должны
+default:
 outputString = 'Something is wrong!';
 break;
 }
