@@ -12,45 +12,45 @@ var code = (vowels.length == 0) ? '0' : '1';
 code += (consonants.length == 0) ? '0' : '1';
 code += (digits.length == 0) ? '0' : '1';
 
-//console.log(code)
-
+var outputString = '';
 switch(code)
 {
 case '111':
-console.log(vowels + ' ' + consonants + ' ' + digits);
+outputString = vowels + ' ' + consonants + ' ' + digits;
 break;
 
 case '110':
-console.log(vowels + ' ' + consonants);
+outputString = vowels + ' ' + consonants;
 break;
 
 case '101':
-console.log(vowels + ' ' + digits);
+outputString = vowels + ' ' + digits;
 break;
 
 case '100':
-console.log(vowels);
+outputString = vowels;
 break;
 
 case '011':
-console.log(consonants + ' ' + digits);
+outputString = consonants + ' ' + digits;
 break;
 
 case '010':
-console.log(consonants);
+outputString = consonants;
 break;
 
 case '001':
-console.log(digits);
+outputString = digits;
 break;
 
 case '000':
-console.log('');
+outputString = '';
 break;
 
 default: //сюда попадать не должны
-console.log('Something is wrong!');
+outputString = 'Something is wrong!';
 break;
 }
 
+process.stdout.write(outputString);
 }
