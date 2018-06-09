@@ -4,9 +4,9 @@ var inputString = process.argv[2];
 
 if (inputString.length >= 1 & inputString.length <= 10000)
 {
-var vowels = inputString.replace(/[^AEIOUaeiou]/g, "");
-var consonants = inputString.replace(/[AEIOUaeiou0-9 ]/g, "").replace(/[^a-zA-Z]/g, "");
-var digits = inputString.replace(/[^0-9]/g, "");
+var vowels = inputString.replace(/[^aeiou]/gi, "");
+var consonants = inputString.replace(/[^a-z]|[aeiou]/gi, "");
+var digits = inputString.replace(/\D/g, "");
 
 var outputString = vowels + " " + consonants + " " + digits;
 
